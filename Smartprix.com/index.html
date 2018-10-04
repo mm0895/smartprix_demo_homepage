@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartPrix</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+<!-- body -->
+
+<body class="w3-content w3-light-gray" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-light-gray w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><img src="img/sm_medium.png" alt="logo" id="side-logo"></h3>
+  </div>
+  <div class="w3-padding-32 w3-large w3-text-grey w3-light-gray" >
+    <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Mobile<i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Nokia</a>
+      <a href="#" class="w3-bar-item w3-button">Samsung</a>
+      <a href="#" class="w3-bar-item w3-button">Mi</a>
+      <a href="#" class="w3-bar-item w3-button">Oppo</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Tablets <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Samsung</a>
+      <a href="#" class="w3-bar-item w3-button">Lenovo</a>
+      <a href="#" class="w3-bar-item w3-button">Nokia</a>
+      <a href="#" class="w3-bar-item w3-button">Acer</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc3()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">
+      Laptop <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Dell</a>
+      <a href="#" class="w3-bar-item w3-button">Lenovo</a>
+      <a href="#" class="w3-bar-item w3-button">HP</a>
+      <a href="#" class="w3-bar-item w3-button">Acer</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc4()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Cameras <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc4" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Nikon</a>
+      <a href="#" class="w3-bar-item w3-button">Canon</a>
+      <a href="#" class="w3-bar-item w3-button">Sony</a>
+      <a href="#" class="w3-bar-item w3-button">Oppo</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc5()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">TVs <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc5" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Sony</a>
+      <a href="#" class="w3-bar-item w3-button">Samsung</a>
+      <a href="#" class="w3-bar-item w3-button">LG</a>
+      <a href="#" class="w3-bar-item w3-button">BPL</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc6()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">SmartWatch <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc6" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Mi</a>
+      <a href="#" class="w3-bar-item w3-button">Lenovo</a>
+      <a href="#" class="w3-bar-item w3-button">Fastrack</a>
+      <a href="#" class="w3-bar-item w3-button">Samsung</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc7()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Gaming <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc7" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Dell</a>
+      <a href="#" class="w3-bar-item w3-button">Lenovo</a>
+      <a href="#" class="w3-bar-item w3-button">HP</a>
+      <a href="#" class="w3-bar-item w3-button">Acer</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc8()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Large Appliances <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc8" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Fridge</a>
+      <a href="#" class="w3-bar-item w3-button">Cooler</a>
+      <a href="#" class="w3-bar-item w3-button">AC</a>
+      <a href="#" class="w3-bar-item w3-button">Washing Machine</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc9()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Personal Appliances <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc9" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Trimmer</a>
+      <a href="#" class="w3-bar-item w3-button">Shaver</a>
+      <a href="#" class="w3-bar-item w3-button">Dryer</a>
+      <a href="#" class="w3-bar-item w3-button">Curler</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <a onclick="myAccFunc10()" href="javascript:void(0)" class="w3-button w3-block w3-light-gray w3-left-align" id="myBtn">Books <i class="fa fa-caret-down"></i></a>
+    <div id="demoAcc10" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button">Self-paced</a>
+      <a href="#" class="w3-bar-item w3-button">Fiction</a>
+      <a href="#" class="w3-bar-item w3-button">Religion</a>
+      <a href="#" class="w3-bar-item w3-button">Spirituality</a>
+      <a href="#" class="w3-bar-item w3-button">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide"><img src="img/logo.jpg" alt="logo-sm" style="width:10%;"></div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- sidebar when opening on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- MAIN PAGE-->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top Nav-bar -->
+  <header class="w3-container w3-large">
+     <div class="w3-bar w3-light-blue">
+  <a href="#" class="w3-bar-item w3-button"><img src="img/logo.jpg" alt="logo-sm" style="width:50px; height: 28px;"></a>
+  <a href="#" class="w3-bar-item w3-button">Smartprix</a>
+  <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
+  <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
+  <a href=""><i class="fa fa-instagram w3-right" style="width:30px; height: 28px;"></i></a>
+  <a href=""><i class="fa fa-linkedin w3-right" style="width:30px; height: 28px;"></i></a>
+  <a href=""><i class="fa fa-twitter w3-right" style="width:30px; height: 28px;"></i></a>
+  <a href=""><i class=" fa fa-facebook-official w3-right" style="width:30px; height: 28px;"></i></a>
+    </div> 
+  </header>
+
+  <hr>
+
+
+
+
+  <!-- Image header -->
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="img/1.jpg" style="width:100%; height: 70%;">
+  <img class="mySlides" src="img/2.jpg" style="width:100%; height: 70%;">
+  <img class="mySlides" src="img/3.jpg" style="width:100%; height: 70%;">
+  <img class="mySlides" src="img/4.jpg" style="width:100%; height: 70%;">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+<hr>
+
+
+
+
+
+  <!-- Product grid -->
+  <h2 class="w3-text-blue">&nbsp;&nbsp;Categories </h2>
+  <div class="w3-card-4">
+  <div class="w3-row w3-grayscale">
+
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/5.jpg" class="w3-border w3-padding" style="width:100%"></a>
+        <a href="#"><p>Mobile<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/6.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Tablets<br></p> </a>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <a href="#" class="w3-hover-opacity"><img src="img/7.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        </div>
+        <a href="#"><p>Laptop<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/8.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Camera<br></p> </a>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/9.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Tv<br></p> </a>
+      </div>
+
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <a href="#" class="w3-hover-opacity"><img src="img/10.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+          <span class="w3-tag w3-display-topleft">Best Offers</span> 
+        </div>
+        <a href="#"><p>SmartWatch<br></p> </a>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/11.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Home Appliances<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/12.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Books<br></p> </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <hr>
+
+
+
+
+
+  <h2 class="w3-text-blue">&nbsp;&nbsp;Trending mobiles </h2>
+   <a href="#" class="w3-button w3-light-blue w3-right">See More</a>
+  <div class="w3-card-4">
+  <div class="w3-row w3-grayscale">
+
+
+    <div class="w3-col l6 s12">
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/b.jpg" class="w3-border w3-padding" style="width:100%"></a>
+       <p>First Mobile<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/c.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Second Mobile<br></p> </a>
+      </div>
+    </div>
+
+    <div class="w3-col l6 s12">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <a href="#" class="w3-hover-opacity"><img src="img/d.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        </div>
+        <a href="#"><p>Third Mobile<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/e.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Fourth Mobile<br></p> </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <hr>
+
+
+<h2 class="w3-text-blue">&nbsp;&nbsp;Top Deal On Television & Fridges </h2>
+   <a href="#" class="w3-button w3-light-blue w3-right">See More</a>
+  <div class="w3-card-4">
+  <div class="w3-row w3-grayscale">
+
+
+    <div class="w3-col l6 s12">
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/f.jpg" class="w3-border w3-padding" style="width:100%"></a>
+       <p>First TV<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/g.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Second TV<br></p> </a>
+      </div>
+    </div>
+
+    <div class="w3-col l6 s12">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <a href="#" class="w3-hover-opacity"><img src="img/h.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        </div>
+        <a href="#"><p>First Fridge<br></p> </a>
+      </div>
+      <div class="w3-container">
+        <a href="#" class="w3-hover-opacity"><img src="img/i.jpg" class="w3-border w3-padding" style="width:100%"> </a>
+        <a href="#"><p>Second Fridge<br></p> </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <hr>
+
+  <!-- Subscribe  -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Want Tech Updates??</h1>
+    <p>Subscribe to our website:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="#" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About SmartPrix</a></p>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">Job</a></p>
+        <p><a href="#">Contact us</a></p>
+        <p><a href="#">Help</a></p>
+        <p><a href="#">Find a Mobile</a></p>
+        <p><a href="#">Mobile Website</a></p>
+        <p><a href="#">Latest News</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Categories</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> SmartPrix</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0123456789</p>
+        <p><i class="fa fa-fw fa-envelope"></i> contact@smartprix.com</p>
+
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Thanks for Visiting <a href="https://www.smartprix.com"  target="_blank" class="w3-hover-opacity">SmartPrix.com</a></div>
+
+
+</div>
+
+
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Donot change these codes -->
+<script >
+function myAccFunc1() {
+    var x = document.getElementById("demoAcc1");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc2() {
+    var x = document.getElementById("demoAcc2");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc3() {
+    var x = document.getElementById("demoAcc3");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc4() {
+    var x = document.getElementById("demoAcc4");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc5() {
+    var x = document.getElementById("demoAcc5");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc6() {
+    var x = document.getElementById("demoAcc6");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc7() {
+    var x = document.getElementById("demoAcc7");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc8() {
+    var x = document.getElementById("demoAcc8");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc9() {
+    var x = document.getElementById("demoAcc9");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc10() {
+    var x = document.getElementById("demoAcc10");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+
+//slides script
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
